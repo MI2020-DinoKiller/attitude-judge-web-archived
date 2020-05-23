@@ -4,5 +4,10 @@
 
 @section('content')
 
-<h1 class="ui header">First header</h1>
+
+
+<div class="ui fluid icon input">
+    <input type="text" placeholder="Search a very wide input...">
+    <i class="search icon"></i>
+</div>
 @endsection

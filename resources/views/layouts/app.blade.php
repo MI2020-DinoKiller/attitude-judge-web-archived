@@ -49,7 +49,7 @@
     @stack('after-styles')
 </head>
 
-<body style="position: relative; margin-top: 49px; height: calc(100% - 49px); overflow-y: overlay; ">
+<body style="position: relative; margin-top: 68px; height: calc(100% - 49px); overflow-y: overlay; ">
 
     <div id="app">
         {{-- @include('includes.partials.logged-in-as') --}}
@@ -58,11 +58,12 @@
         <div style="margin-top: 28px; ">
             <div class="ui main container">
             {{-- @include('includes.partials.messages') --}}
+            @yield('content')
             </div><!-- container -->
 
         {{-- @include('frontend.includes.hero') --}}
 
-        @yield('content')
+
 
         {{-- @include('frontend.includes.footer') --}}
         </div>
