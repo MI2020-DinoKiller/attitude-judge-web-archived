@@ -4,10 +4,13 @@
 
 @section('content')
 
+    {{ html()->form('POST', route('index'))->class(['ui', 'form'])->open() }}
+    <div class="field">
+        <div class="ui fluid icon input">
+            <input type="text" placeholder="Search a very wide input...">
+            <i class="search icon"></i>
+        </div>
+    </div>
+    {{ html()->form()->close() }}
 
-
-<div class="ui fluid icon input">
-    <input type="text" placeholder="Search a very wide input...">
-    <i class="search icon"></i>
-</div>
 @endsection
