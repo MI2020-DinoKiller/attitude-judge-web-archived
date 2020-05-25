@@ -4,7 +4,6 @@
 
 @section('content')
 
-    {{ $SSS}}
-    WHAT??
+    {{ $SSS }}
 
 @endsection
