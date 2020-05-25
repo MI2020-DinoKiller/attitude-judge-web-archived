@@ -18,7 +18,7 @@ steps:
 
 - name: backend
   pull: if-not-exists
-  image: laradock/workspace:1.8-71
+  image: laradock/workspace:latest-7.4
   commands:
   - php -v
   - composer -V
