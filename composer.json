@@ -14,7 +14,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "spatie/laravel-html": "^2.26"
+        "spatie/laravel-html": "^2.26",
+        "symfony/process": "^5.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

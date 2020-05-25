@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 })->name('index');
+
+Route::post('/search', [SearchController::class, 'gotcha'])->name('getsearch');
+
+Route::get('/search/{url}', [SearchController::class, 'show'])->name('search');
