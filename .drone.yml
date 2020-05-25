@@ -9,7 +9,7 @@ platform:
 steps:
 - name: frontend
   pull: if-not-exists
-  image: node:8.1.2
+  image: node:14.2.0
   commands:
   - node -v
   - npm -v
