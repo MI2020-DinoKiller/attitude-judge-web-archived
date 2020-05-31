@@ -41,11 +41,11 @@ steps:
 #       - sh ./deploy.sh
 
 services:
-- name: mariadb
+- name: postgres
   pull: if-not-exists
-  image: mariadb
+  image: postgres
   environment:
-    MYSQL_DATABASE: homestead
-    MYSQL_USER: homestead
-    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    POSTGRES_DATABASE: homestead
+    POSTGRES_USER: homestead
+    POSTGRES_PASSWORD: secert
 
