@@ -41,7 +41,7 @@ steps:
 #       - sh ./deploy.sh
 
 services:
-- name: main-mariadb
+- name: mariadb
   pull: if-not-exists
   image: mariadb
   environment:
