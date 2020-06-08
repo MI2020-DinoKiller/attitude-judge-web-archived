@@ -20,7 +20,7 @@ class SearchController extends Controller
         if (intval($page) == 0) {
             return redirect(route("search", [$url, "1"]));
         }
-        $process = new Process(['python3', base_path().'/google_connected.py', $url, $page]);
+        $process = new Process(['python3.7', base_path().'/google_connected.py', $url, $page]);
         $process->run();
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
