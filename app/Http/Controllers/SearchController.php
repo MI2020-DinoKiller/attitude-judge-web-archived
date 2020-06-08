@@ -15,9 +15,12 @@ class SearchController extends Controller
      * @param string $url
      * @return \Illuminate\Http\Response
      */
-    public function show(string $url)
+    public function show(string $url, string $page = "1")
     {
-        $process = new Process(['python3', base_path().'/google_connected.py', $url]);
+        if (intval($page) == 0) {
+            return redirect(route("search", [$url, "1"]));
+        }
+        $process = new Process(['python3.7', base_path().'/google_connected.py', $url, $page]);
         $process->run();
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
@@ -33,6 +36,6 @@ class SearchController extends Controller
     }
 
     public function gotcha(Request $request) {
-        return redirect(route("search", $request->input('searchtext')));
+        return redirect(route("search", [$request->input('searchtext'), "1"]));
     }
 }
