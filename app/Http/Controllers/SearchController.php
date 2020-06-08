@@ -20,12 +20,16 @@ class SearchController extends Controller
         if (intval($page) == 0) {
             return redirect(route("search", [$url, "1"]));
         }
-        $process = new Process(['python3.7', base_path().'/google_connected.py', $url, $page]);
+        $process = new Process(['python3', base_path().'/google_connected.py', $url, $page]);
         $process->run();
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
         }
-        return view('search')->with("SSS", $process->getOutput());
+        $data = [
+            'SSS'  => $process->getOutput(),
+            'p'   => route("search2", [$url])
+        ];
+        return view('search')->with($data);
         // if ($news = $this->newsRepository->findByUrl($url)) {
         //     return view('frontend.news.show')
         //         ->withNews($news);

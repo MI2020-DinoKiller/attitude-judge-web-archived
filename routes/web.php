@@ -24,4 +24,6 @@ Route::get('/whitelist', function () {
 
 Route::post('/search', [SearchController::class, 'gotcha'])->name('getsearch');
 
+Route::get('/search/{url}', [SearchController::class, 'show'])->name('search2');
+
 Route::get('/search/{url}/{page}', [SearchController::class, 'show'])->name('search');
