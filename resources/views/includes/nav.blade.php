@@ -5,8 +5,8 @@
                 {{app_name()}}
             </span>
         </a>
-        {{-- <a class="item active" href="/"><i class="home icon"></i> 首頁</a> --}}
-        <div class="right menu">
+        <a class="item" href="/whitelist"><i class="list icon"></i> 白名單</a>
+        {{-- <div class="right menu">
             <div class="item">
                 <a class="ui button" style="margin-right: 0.5em; " href="/login">
                     登入
@@ -15,6 +15,6 @@
                     註冊
                 </a>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>

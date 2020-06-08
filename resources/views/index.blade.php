@@ -7,7 +7,7 @@
     {{ html()->form('POST', route('getsearch'))->class(['ui', 'form'])->open() }}
     <div class="field">
         <div class="ui fluid icon input">
-            <input name="searchtext" type="text" placeholder="Search a very wide input...">
+            <input name="searchtext" type="text" placeholder="開始搜尋......" required>
             <i class="search icon"></i>
         </div>
     </div>
